@@ -1,0 +1,34 @@
+airbnb_rj:
+  outputs:
+    local:
+      dbname: home
+      host: 192.168.18.87
+      password: l12345
+      port: 5432
+      schema: airbnb
+      threads: 4
+      type: postgres
+      user: postgres
+    remote:
+      dbname: database_vx82
+      host: dpg-co6a0ka0si5c73cck8d0-a.oregon-postgres.render.com
+      password: PR1gvstOECPAb8Yqat1OptlTPm2orbDC
+      port: 5432
+      schema: airbnb
+      threads: 4
+      type: postgres
+      user: ada
+  target: local
+
+dw_zero_dbt:
+  outputs:
+    dev:
+      type: postgres
+      dbname: "{{ env_var('DB_NAME_PROD') }}"
+      host: "{{ env_var('DB_HOST_PROD') }}"
+      pass: "{{ env_var('DB_PASSWORD_PROD') }}"
+      port: 5432
+      schema: "{{ env_var('DB_SCHEMA_PROD') }}"
+      threads: 1
+      user: "{{ env_var('DB_USER_PROD') }}"
+  target: dev

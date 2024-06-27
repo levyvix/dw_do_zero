@@ -1,0 +1,28 @@
+version: 2
+
+sources:
+  - name: yfinance
+    database: database
+    schema: public
+    tables:
+      - name: commodities
+        description: tabela de precos dos indices
+        columns:
+          - name: Date
+            description: Data da observacao
+          - name: Open
+            description: Preco de abertura
+          - name: High
+            description: Preco maximo
+          - name: Low
+            description: Preco minimo
+          - name: Close
+            description: Preco de fechamento
+          - name: Volume
+            description: Volume de negociacao
+          - name: Dividends
+            description: Dividendos
+          - name: 'Stock Splits'
+            description: Divisoes de acoes
+          - name: symbol
+            description: Simbolo do ativo (ticker)

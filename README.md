@@ -1,0 +1,1 @@
+to run dbt, set environment variables (in dbt file): set -o allexport; source ../dw_zero/.env; set +o allexport
