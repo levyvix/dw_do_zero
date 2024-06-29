@@ -26,3 +26,14 @@ sources:
             description: Divisoes de acoes
           - name: symbol
             description: Simbolo do ativo (ticker)
+      - name: movimentacao
+        description: "Tabela seed"
+        columns:
+          - name: date
+            description: "Data da transação"
+          - name: symbol
+            description: "Símbolo da commodity"
+          - name: action
+            description: "Tipo de transação (buy/sell)"
+          - name: quantity
+            description: "Quantidade transacionada"

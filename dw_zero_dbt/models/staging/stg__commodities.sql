@@ -8,7 +8,7 @@ renamed as (
         "Open"::FLOAT as open,
         "High"::FLOAT as high,
         "Low"::FLOAT as low,
-        "Close"::FLOAT as close,
+        "Close"::FLOAT as valor_fechamento,
         "Volume"::FLOAT as volume,
         "Dividends"::FLOAT as dividends,
         "Stock Splits"::FLOAT as stock_splits,
