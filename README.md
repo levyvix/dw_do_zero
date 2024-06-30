@@ -40,12 +40,12 @@ Os snapshots são utilizados para manter um histórico de como os dados mudam ao
 ```plaintext
 ├── models
 │   ├── staging
-│   │   ├── stg_commodities.sql
-│   │   └── stg_movimentacao_commodities.sql
+│   │   ├── stg__commodities.sql
+│   │   └── stg__movimentacao.sql
 │   └── datamart
 │       └── dm_commodities.sql
 ├── seeds
-│   └── movimentacao_commodities.csv
+│   └── movimentacao.csv
 ├── dbt_project.yml
 └── README.md
 ```
@@ -69,6 +69,13 @@ Os snapshots são utilizados para manter um histórico de como os dados mudam ao
    ```bash
    pip install dbt-core dbt-postgres
    ```
+
+   Com Poetry
+   ```bash
+   poetry install
+   poetry shell
+   ```
+
 
 3. **Configurar o DBT**:
    - Configure o arquivo `profiles.yml` para se conectar ao seu Data Warehouse. O arquivo deve estar no diretório `~/.dbt/` ou no diretório especificado pela variável de ambiente `DBT_PROFILES_DIR`.
